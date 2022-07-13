@@ -1,0 +1,35 @@
+.fluid {
+	background: #e59236;
+	position: relative;
+	/* position: fixed;
+	bottom: 0px;
+	width: 100%;
+	left: 0px; */
+}
+.outerContainer {
+	width: 100%;
+	max-width: 1410px;
+	padding: 0px 15px;
+	margin: auto;
+	height: 40px;
+}
+.flexContainer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.link {
+	color: #fff;
+}
+.link a {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 28px;
+	text-decoration: none;
+	color: #fff;
+	display: flex;
+	align-items: center;
+}
+.link img {
+	margin-right: 8px;
+}

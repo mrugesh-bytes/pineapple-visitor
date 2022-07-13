@@ -1,0 +1,31 @@
+.outerContainer {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.outerbg {
+	background: url(../../images/outer-bg.png) no-repeat bottom center;
+	position: relative;
+}
+.outerbg:before,
+.outerbg:after {
+	content: "";
+	position: absolute;
+	background-size: contain;
+}
+.outerbg:before {
+	background: url(../../images/visit-apartment-boy.svg) no-repeat bottom
+		center;
+	width: 371px;
+	height: 496px;
+	bottom: 20px;
+	left: 78px;
+}
+.outerbg:after {
+	background: url(../../images/request-token-girl.svg) no-repeat bottom center;
+	width: 371px;
+	height: 496px;
+	bottom: 50px;
+	right: 45px;
+}

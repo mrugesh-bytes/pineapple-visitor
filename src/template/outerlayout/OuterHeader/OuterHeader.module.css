@@ -1,0 +1,19 @@
+.fluid {
+	border-bottom: 1px solid #3f4246;
+	/* position: fixed;
+	width: 100%; */
+}
+.outerContainer {
+	max-width: 1410px;
+	padding: 16px 15px;
+	margin: auto;
+}
+.flexContainer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.logo img {
+	cursor: pointer;
+	max-width: 165px;
+}
