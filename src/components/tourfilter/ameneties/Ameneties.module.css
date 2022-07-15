@@ -1,0 +1,130 @@
+.amenetiesWrapper {
+	background: #fff;
+	border-radius: 16px;
+	width: 450px;
+	padding: 32px;
+}
+.title {
+	display: flex;
+	align-items: center;
+	margin-bottom: 32px;
+}
+.title h4 {
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 24px;
+	color: #191c21;
+}
+.title .selectAll {
+	font-size: 14px;
+	line-height: 17px;
+	text-decoration-line: underline;
+	display: inline-block;
+	margin-left: 16px;
+}
+.btnWrapper {
+	text-align: center;
+}
+.btnWrapper button {
+	background: #51ab86;
+	border-radius: 8px;
+	padding: 10px 25px;
+	display: inline-flex;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 28px;
+	color: #fff;
+}
+.btnWrapper .clearAll {
+	font-size: 14px;
+	line-height: 17px;
+	text-decoration-line: underline;
+	color: #191c21;
+	display: inline-block;
+	margin-top: 6px;
+}
+
+/* Custom Select CSS Start */
+.selectContainer {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.selectWrapper {
+	display: flex;
+	width: 50%;
+	margin-bottom: 32px;
+}
+
+.selectWrapper label {
+	display: flex;
+	align-items: center;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 19px;
+	position: relative;
+	color: #191c21;
+	cursor: pointer;
+}
+
+.selectWrapper input {
+	width: 0;
+	height: 0;
+	opacity: 0;
+}
+
+.selectWrapper label > span {
+	width: 24px;
+	height: 24px;
+	display: flex;
+	justify-content: center;
+	border: 1px solid #d1d2d3;
+	margin-right: 8px;
+	border-radius: 3px;
+	transition: all 0.3s;
+}
+
+.selectWrapper input:checked + label > span {
+	border: 12px solid #51ab86;
+	animation: bounce 250ms;
+}
+
+.selectWrapper input:checked + label > span::before {
+	content: "";
+	position: absolute;
+	top: 6px;
+	left: 4px;
+	border-right: 2px solid transparent;
+	border-bottom: 2px solid transparent;
+	transform: rotate(45deg);
+	transform-origin: 0% 100%;
+	animation: checked-box 125ms 250ms forwards;
+}
+
+@keyframes checked-box {
+	0% {
+		width: 0;
+		height: 0;
+		border-color: #fff;
+		transform: translate(0, 0) rotate(45deg);
+	}
+	100% {
+		width: 8px;
+		height: 12px;
+		border-color: #fff;
+		transform: translate(0, -8px) rotate(45deg);
+	}
+}
+
+@keyframes bounce {
+	0% {
+		transform: scale(1);
+	}
+	33% {
+		transform: scale(0.7);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+/* Custom Select CSS End */

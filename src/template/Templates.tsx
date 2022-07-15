@@ -6,6 +6,7 @@ import { Outlet } from "react-router-dom";
 import LoginPage from "../pages/LoginPage";
 import SignupPage from "../pages/SignupPage";
 import UnitPage from "../pages/UnitPage";
+import TourFilterPage from "../pages/TourFilterPage";
 
 const Templates = () => {
 	return (
@@ -13,6 +14,7 @@ const Templates = () => {
 			<Routes>
 				<Route path="/" element={<Layout />}>
 					<Route path="units" element={<UnitPage />} />
+					<Route path="tour-filter" element={<TourFilterPage />} />
 				</Route>
 
 				<Route path="/" element={<OuterLayout />}>

@@ -16,10 +16,10 @@ const Header = () => {
 				<div className={styles.headerMenu}>
 					<ul>
 						<li>
-							<Link to="/">Units</Link>
+							<Link to="/units">Units</Link>
 						</li>
 						<li>
-							<Link to="/">Build My Tour</Link>
+							<Link to="/tour-filter">Build My Tour</Link>
 						</li>
 						<li>
 							<Link to="/">Map</Link>

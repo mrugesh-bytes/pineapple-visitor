@@ -66,3 +66,30 @@ table {
 	border-spacing: 0;
 }
 /* CSS Resetting End */
+
+/* React Modal CSS Start */
+.ReactModal__Overlay {
+	background: rgba(25, 28, 33, 0.12) !important;
+	backdrop-filter: blur(10px) !important;
+	z-index: 9999;
+}
+body.ReactModal__Body--open {
+	overflow: hidden;
+}
+
+/* Carousel CSS Start */
+.carousel .control-dots .dot {
+	margin: 0px 4px !important;
+	opacity: 1 !important;
+	width: 8px !important;
+	height: 8px !important;
+	box-shadow: none !important;
+}
+.carousel .control-dots .dot.selected {
+	width: 18px !important;
+	border-radius: 10px !important;
+}
+.carousel.carousel-slider,
+.carousel .slide {
+	border-radius: 8px !important;
+}
