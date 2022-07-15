@@ -1,0 +1,40 @@
+.fluid {
+	border-bottom: 1px solid #3f4246;
+	/* position: fixed;
+	width: 100%; */
+}
+.outerContainer {
+	max-width: 1410px;
+	padding: 16px 15px;
+	margin: auto;
+}
+.flexContainer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.logo img {
+	cursor: pointer;
+	max-width: 165px;
+}
+.headerMenu {
+	display: flex;
+	align-items: center;
+}
+.headerMenu ul li {
+	display: inline-block;
+	margin: 0px 28px;
+}
+.headerMenu ul li a {
+	color: #fff;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 28px;
+	text-transform: capitalize;
+	cursor: pointer;
+	transition: all ease 0.3s;
+}
+.headerMenu ul li a:hover {
+	color: #f8dc7f;
+	transition: all ease 0.3s;
+}

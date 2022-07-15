@@ -89,6 +89,7 @@
 	border: none;
 	border-radius: 8px;
 	cursor: pointer;
+	text-align: center;
 }
 .formWrapper {
 	margin-top: 34px;
@@ -96,6 +97,7 @@
 .signinBorder {
 	position: relative;
 	margin-top: 24px;
+	text-align: center;
 }
 .signinBorder:before {
 	content: "";

@@ -5,12 +5,15 @@ import OuterLayout from "./outerlayout/OuterLayout";
 import { Outlet } from "react-router-dom";
 import LoginPage from "../pages/LoginPage";
 import SignupPage from "../pages/SignupPage";
+import UnitPage from "../pages/UnitPage";
 
 const Templates = () => {
 	return (
 		<BrowserRouter>
 			<Routes>
-				<Route path="/" element={<Layout />}></Route>
+				<Route path="/" element={<Layout />}>
+					<Route path="units" element={<UnitPage />} />
+				</Route>
 
 				<Route path="/" element={<OuterLayout />}>
 					<Route path="login" element={<LoginPage />} />

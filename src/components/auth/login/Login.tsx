@@ -11,6 +11,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getAuth } from "../../../redux/auth/actions/auth.action";
 
 const Login = () => {
+	const [showPass, setShowPass] = useState(false);
 	const [loginDetails, setLoginDetails]: any = useState({
 		email: "",
 		password: "",
@@ -34,7 +35,7 @@ const Login = () => {
 		dispatch(getAuth(loginDetails, onSuccess));
 	};
 	const onSuccess = (data: any) => {
-		navigate("/signup");
+		navigate("/units");
 	};
 
 	return (
@@ -57,13 +58,19 @@ const Login = () => {
 					<label>Password</label>
 					<div className={style.passwordWrapper}>
 						<input
-							type="password"
+							type={showPass ? "text" : "password"}
 							name="password"
 							placeholder="Enter your password"
 							onChange={handleLoginDetails}
 						/>
-						<div className={style.iconToggle}>
-							<img src={iconShow} alt="show" />
+						<div
+							onClick={() => setShowPass(!showPass)}
+							className={style.iconToggle}
+						>
+							<img
+								src={!showPass ? iconShow : iconHide}
+								alt="Eye"
+							/>
 						</div>
 					</div>
 				</div>

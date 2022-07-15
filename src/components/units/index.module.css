@@ -1,0 +1,16 @@
+.container {
+	display: flex;
+	width: 100%;
+	max-width: 1470px;
+	padding: 50px 15px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.unitCardWrapper {
+	width: 100%;
+	max-width: 450px;
+}
+.unitDashboardWrapper {
+	padding-left: 30px;
+	width: 100%;
+}
