@@ -6,27 +6,25 @@ import sliderImg from "../../../images/temp/unit-banner.svg";
 
 const Slider = () => {
 	return (
-		<div>
-			<Carousel
-				className={styles.carouselStyle}
-				showThumbs={false}
-				autoPlay={true}
-				infiniteLoop={true}
-				showArrows={false}
-				showStatus={false}
-				emulateTouch
-			>
-				<div className={styles.slideWrapper}>
-					<img src={sliderImg} alt="Slider" />
-				</div>
-				<div>
-					<img src={sliderImg} alt="Slider" />
-				</div>
-				<div>
-					<img src={sliderImg} alt="Slider" />
-				</div>
-			</Carousel>
-		</div>
+		<Carousel
+			className={styles.carouselStyle}
+			showThumbs={false}
+			autoPlay={true}
+			infiniteLoop={true}
+			showArrows={false}
+			showStatus={false}
+			emulateTouch
+		>
+			<div className={styles.slideWrapper}>
+				<img src={sliderImg} alt="Slider" />
+			</div>
+			<div>
+				<img src={sliderImg} alt="Slider" />
+			</div>
+			<div>
+				<img src={sliderImg} alt="Slider" />
+			</div>
+		</Carousel>
 	);
 };
 

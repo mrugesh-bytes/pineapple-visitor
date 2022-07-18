@@ -28,6 +28,7 @@ const Popup = (props: any) => {
 			onRequestClose={closeModal}
 			style={customStyles}
 			contentLabel="Modal"
+			// shouldCloseOnOverlayClick={false}
 		>
 			{props.bodyData}
 		</Modal>

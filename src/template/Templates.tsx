@@ -7,6 +7,8 @@ import LoginPage from "../pages/LoginPage";
 import SignupPage from "../pages/SignupPage";
 import UnitPage from "../pages/UnitPage";
 import TourFilterPage from "../pages/TourFilterPage";
+import ConfirmPage from "../pages/ConfirmPage";
+import SelfGuidePage from "../pages/SelfGuidePage";
 
 const Templates = () => {
 	return (
@@ -15,6 +17,8 @@ const Templates = () => {
 				<Route path="/" element={<Layout />}>
 					<Route path="units" element={<UnitPage />} />
 					<Route path="tour-filter" element={<TourFilterPage />} />
+					<Route path="confirm" element={<ConfirmPage />} />
+					<Route path="self-guide" element={<SelfGuidePage />} />
 				</Route>
 
 				<Route path="/" element={<OuterLayout />}>

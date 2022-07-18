@@ -1,0 +1,50 @@
+.selfGuideWrapper {
+	background: #ffffff;
+	border-radius: 16px;
+	width: 100%;
+	max-width: 590px;
+	padding: 45px 30px;
+	margin: auto;
+}
+.selfGuideWrapper .title {
+	font-weight: 700;
+	font-size: 40px;
+	line-height: 48px;
+	margin-bottom: 32px;
+	text-align: center;
+	text-transform: capitalize;
+	font-family: "Inter", sans-serif;
+}
+.selfGuideWrapper p {
+	font-weight: 600;
+	font-size: 22px;
+	line-height: 27px;
+	text-align: center;
+}
+.buttonWrapper .btn {
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 28px;
+	padding: 6px 54px;
+	height: 40px;
+	border: 1px solid transparent;
+	border-radius: 8px;
+	text-transform: capitalize;
+	color: #191c21;
+	margin: 0px 12px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+.buttonWrapper .btn.btnNo {
+	border: 1px solid #191c21;
+}
+.buttonWrapper .btn.btnYes {
+	background: #51ab86;
+	border: 1px solid #51ab86;
+	color: #fff;
+}
+.buttonWrapper {
+	margin-top: 32px;
+	text-align: center;
+}

@@ -76,7 +76,11 @@ table {
 body.ReactModal__Body--open {
 	overflow: hidden;
 }
-
+.ReactModal__Content {
+	padding: 0px !important;
+	border-radius: 8px !important;
+	border: none !important;
+}
 /* Carousel CSS Start */
 .carousel .control-dots .dot {
 	margin: 0px 4px !important;

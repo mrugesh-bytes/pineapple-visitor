@@ -15,12 +15,15 @@
 	color: #191c21;
 	margin: 0px 0px 16px;
 	font-family: "Inter", sans-serif;
+	text-align: center;
 }
 .authDesc {
 	font-size: 16px;
 	line-height: 30px;
 	color: #3f4246;
 	margin: 0px;
+	text-align: center;
+	font-family: "Inter", sans-serif;
 }
 .fieldWrapper {
 	text-align: left;
