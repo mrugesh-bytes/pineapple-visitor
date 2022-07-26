@@ -1,3 +1,6 @@
 .slideWrapper {
 	position: relative;
 }
+.carouselStyle > div {
+	height: 232px;
+}

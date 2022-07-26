@@ -4,7 +4,8 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import styles from "./Slider.module.css";
 import sliderImg from "../../../images/temp/unit-banner.svg";
 
-const Slider = () => {
+const Slider = ({ sliderBanner }: any) => {
+	const images = sliderBanner && sliderBanner?.split(",");
 	return (
 		<Carousel
 			className={styles.carouselStyle}
@@ -15,15 +16,8 @@ const Slider = () => {
 			showStatus={false}
 			emulateTouch
 		>
-			<div className={styles.slideWrapper}>
-				<img src={sliderImg} alt="Slider" />
-			</div>
-			<div>
-				<img src={sliderImg} alt="Slider" />
-			</div>
-			<div>
-				<img src={sliderImg} alt="Slider" />
-			</div>
+			{images &&
+				images.map((image: any) => <img src={image} alt="Slider" />)}
 		</Carousel>
 	);
 };

@@ -67,6 +67,63 @@ table {
 }
 /* CSS Resetting End */
 
+/* React Calendar CSS Start */
+.react-calendar .react-calendar__navigation {
+	text-align: center;
+	font-size: 22px;
+	line-height: 26px;
+	margin-bottom: 20px;
+}
+.react-calendar .react-calendar__month-view__days .react-calendar__tile,
+.react-calendar
+	.react-calendar__viewContainer
+	.react-calendar__month-view__weekdays__weekday {
+	text-align: center;
+	height: 56px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+.react-calendar .react-calendar__month-view__days .react-calendar__tile abbr {
+	position: relative;
+}
+.react-calendar
+	.react-calendar__month-view__days
+	.react-calendar__tile.react-calendar__tile--now {
+	color: #e59236;
+}
+.react-calendar
+	.react-calendar__month-view__days
+	.react-calendar__tile.react-calendar__tile--now:before {
+	content: "";
+	position: absolute;
+	border: 1px solid #e59236;
+	height: 55px;
+	width: 55px;
+	border-radius: 50%;
+}
+.react-calendar
+	.react-calendar__month-view__days
+	.react-calendar__tile.react-calendar__tile--rangeBothEnds {
+	color: #fff;
+}
+.react-calendar
+	.react-calendar__month-view__days
+	.react-calendar__tile.react-calendar__tile--rangeBothEnds:before {
+	border: 1px solid #e59236;
+	background-color: #e59236;
+	content: "";
+	position: absolute;
+	height: 55px;
+	width: 55px;
+	border-radius: 50%;
+}
+.react-calendar__navigation .react-calendar__navigation__arrow {
+	display: inline-block;
+	margin: 0px 12px;
+	cursor: pointer;
+}
 /* React Modal CSS Start */
 .ReactModal__Overlay {
 	background: rgba(25, 28, 33, 0.12) !important;

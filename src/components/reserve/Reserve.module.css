@@ -1,0 +1,17 @@
+.container {
+	display: flex;
+	width: 100%;
+	max-width: 1470px;
+	padding: 50px 15px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.cardWrapper {
+	width: 100%;
+	max-width: 450px;
+}
+.calendarWrapper {
+	width: 100%;
+	max-width: 100%;
+	padding-left: 30px;
+}

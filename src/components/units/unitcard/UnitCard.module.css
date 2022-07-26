@@ -39,7 +39,6 @@
 	font-weight: 600;
 	font-size: 18px;
 	line-height: 28px;
-
 	height: 48px;
 	width: 100%;
 	display: flex;
@@ -47,11 +46,13 @@
 	justify-content: center;
 	cursor: pointer;
 }
-.formField .btn.btnSuccess {
-	background: #51ab86;
-	color: #fff;
-}
-.formField .btn.btnDisable {
+
+.formField .btn[disabled] {
+	cursor: not-allowed;
 	background: #d1d2d3;
 	color: #3f4246;
+}
+.formField .btn {
+	background: #51ab86;
+	color: #fff;
 }

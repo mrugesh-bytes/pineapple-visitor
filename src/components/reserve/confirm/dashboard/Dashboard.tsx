@@ -1,10 +1,13 @@
 import React from "react";
 import styles from "./Dashboard.module.css";
-import bannerImg from "../../../images/core/appointment-confirmation.png";
-import iconTime from "../../../images/icons/icon-time.svg";
-import iconCalender from "../../../images/icons/icon-calendar.svg";
+import bannerImg from "../../../../images/core/appointment-confirmation.png";
+import iconCalender from "../../../../images/icons/icon-calendar.svg";
+import { useLocation } from "react-router-dom";
+import moment from "moment";
 
 const Dashboard = () => {
+	const location: any = useLocation();
+	const selectedDate = location.state.selectedDate;
 	return (
 		<div className={styles.dashboardWrapper}>
 			<h2 className={styles.title}>Schedule a visit for B</h2>
@@ -21,13 +24,7 @@ const Dashboard = () => {
 						<div className={styles.scheduleIcon}>
 							<img src={iconCalender} alt="Icon Date" />{" "}
 						</div>
-						<span>07-Jun-2022</span>
-					</div>
-					<div className={styles.time}>
-						<div className={styles.scheduleIcon}>
-							<img src={iconTime} alt="Icon Calender" />
-						</div>
-						<span>03:30 PM</span>
+						<span>{moment(selectedDate).format("DD-MM-YYYY")}</span>
 					</div>
 				</div>
 				<div className={styles.btnWrapper}>
