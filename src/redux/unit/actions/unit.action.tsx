@@ -69,7 +69,7 @@ export const getUnit: any = (id: string) => {
 	return (dispatch: Dispatch<any>) => {
 		dispatch(getUnitRequest());
 		return axios
-			.get(`http://192.168.10.143:5000/units?id=${id}`)
+			.get(`http://192.168.10.143:5000/units/${id}`)
 			.then((response) => dispatch(getUnitSuccess(response.data.units)))
 			.catch((error) => dispatch(getUnitFailure(error)));
 	};

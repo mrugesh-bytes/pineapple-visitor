@@ -11,8 +11,8 @@ const UnitCard = () => {
 	const [locationId, setLocationId] = useState("");
 	const [unitId, setUnitId] = useState("");
 	const dispatch = useDispatch();
+	const [units, setUnits] = useState([])
 	const locations = useSelector((state: any) => state.locationReducer.data);
-	const units = useSelector((state: any) => state.unitReducer.units.data);
 
 	useEffect(() => {
 		dispatch(getLocation());
@@ -20,7 +20,8 @@ const UnitCard = () => {
 
 	useEffect(() => {
 		if (locationId) {
-			dispatch(getUnitsLocation(locationId));
+			const [unitList] = locations.filter((location: any) => location.id === locationId)
+			setUnits(unitList.units)
 		}
 	}, [locationId]);
 

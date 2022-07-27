@@ -10,7 +10,6 @@ import { useNavigate } from "react-router-dom";
 const UnitDashboard = (props: any) => {
 	const navigate = useNavigate();
 	const unit = useSelector((state: any) => state.unitReducer.unit.data);
-	console.log(unit);
 
 	const handleReserve = () => {
 		navigate("/reserve");
