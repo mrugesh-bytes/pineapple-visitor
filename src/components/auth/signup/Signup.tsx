@@ -59,6 +59,15 @@ const Signup = () => {
 			</p>
 			<form onSubmit={handleSignup} className={style.formWrapper}>
 				<div className={style.fieldWrapper}>
+					<label>Full Name</label>
+					<input
+						type="text"
+						name="name"
+						placeholder="Enter your full Name"
+						onChange={handleSignupDetails}
+					/>
+				</div>
+				<div className={style.fieldWrapper}>
 					<label>Email Id</label>
 					<input
 						type="email"
