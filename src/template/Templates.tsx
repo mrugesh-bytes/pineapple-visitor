@@ -10,6 +10,7 @@ import SelfGuidePage from "../pages/SelfGuidePage";
 import ReservePage from "../pages/ReservePage";
 import Confirm from "../components/reserve/confirm/Confirm";
 import AppointmentPage from "../pages/AppointmentPage";
+import ForgotPasswordPage from "../pages/ForgotPasswordPage";
 
 const Templates = () => {
 	return (
@@ -27,6 +28,10 @@ const Templates = () => {
 				<Route path="/" element={<OuterLayout />}>
 					<Route path="login" element={<LoginPage />} />
 					<Route path="signup" element={<SignupPage />} />
+					<Route
+						path="forgot-password"
+						element={<ForgotPasswordPage />}
+					/>
 				</Route>
 			</Routes>
 		</BrowserRouter>

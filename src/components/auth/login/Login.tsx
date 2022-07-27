@@ -74,7 +74,7 @@ const Login = () => {
 						</div>
 					</div>
 				</div>
-				<Link className={style.forgetPassword} to="/">
+				<Link className={style.forgetPassword} to="/forgot-password">
 					Trouble to get sign in?
 				</Link>
 				<div className={style.submitWrapper}>
