@@ -2,9 +2,15 @@ import React from "react";
 import styles from "./Header.module.css";
 import logo from "../../../images/core/Pineapple-logo.svg";
 import Button from "../../../components/common/button/Button";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Header = () => {
+	const navigate = useNavigate()
+	const handleLogout = () => {
+		localStorage.clear();
+
+        navigate('/');
+	}
 	return (
 		<div className={styles.fluid}>
 			<div className={`${styles.outerContainer} ${styles.flexContainer}`}>
@@ -35,7 +41,7 @@ const Header = () => {
 						</li>
 					</ul>
 					<div className={styles.btnWrapper}>
-						<Button />
+						<Button onClick={handleLogout} text={'Logout'} />
 					</div>
 				</div>
 			</div>

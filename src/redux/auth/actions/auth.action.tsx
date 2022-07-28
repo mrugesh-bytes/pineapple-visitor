@@ -9,8 +9,6 @@ import {
 	GET_SIGNUP_FAILURE,
 } from "../constants/auth.constant";
 
-const BASE_URL = process.env.REACT_APP_BASE_URL;
-
 // Get Auth Request
 const getAuthRequest = () => {
 	return {
@@ -58,14 +56,14 @@ export const getAuth: any = (loginDetails: any, onSuccess: any) => {
 	return (dispatch: Dispatch<any>) => {
 		dispatch(getAuthRequest());
 		axios
-			.post(`${BASE_URL}/visitor/login`, loginDetails)
-			.then((response) => {
+			.post(`/visitor/login`, loginDetails)
+			.then((response: any) => {
 				dispatch(getAuthSuccess(response.data));
-				localStorage.setItem("accessToken", response.data.result.token);
+				localStorage.setItem("accessToken", response.token);
 				localStorage.setItem("email", loginDetails.email);
 				localStorage.setItem(
-					"user",
-					JSON.stringify(response.data.result.staff)
+					"visitor",
+					JSON.stringify(response.visitor)
 				);
 				onSuccess(response.data.result);
 			})
@@ -78,7 +76,7 @@ export const getRegister: any = (signupDetails: any, onSuccess: any) => {
 	return (dispatch: Dispatch<any>) => {
 		dispatch(getSignupRequest());
 		return axios
-			.post(`${BASE_URL}/visitor/register`, signupDetails)
+			.post(`/visitor/register`, signupDetails)
 			.then((response) => {
 				dispatch(getSignupSuccess(response.data.result));
 				localStorage.setItem("accessToken", response.data.result.token);
