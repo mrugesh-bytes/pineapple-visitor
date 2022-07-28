@@ -1,61 +1,61 @@
 .dashboardWrapper {
-	background-color: #fff;
-	border-radius: 16px;
+    background-color: #fff;
+    border-radius: 16px;
 }
 .dashboardWrapper .title {
-	font-weight: 700;
-	font-size: 32px;
-	line-height: 32px;
-	padding: 32px;
-	border-bottom: 1px solid #191c21;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 32px;
+    padding: 32px;
+    border-bottom: 1px solid #191c21;
 }
 .dashboardBanner img {
-	margin: 30px auto 12px;
+    margin: 30px auto 12px;
 }
 .scheduleInfo p {
-	text-align: center;
-	font-size: 18px;
-	line-height: 32px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 32px;
 }
 .schedule {
-	padding-top: 24px;
-	padding-bottom: 34px;
-	text-align: center;
+    padding-top: 24px;
+    padding-bottom: 34px;
+    text-align: center;
 }
 .scheduleIcon {
-	width: 48px;
-	height: 48px;
-	background: #eefff8;
-	border-radius: 8px;
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-	margin-right: 16px;
+    width: 48px;
+    height: 48px;
+    background: #eefff8;
+    border-radius: 8px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 16px;
 }
 .schedule img {
-	width: 24px;
+    width: 24px;
 }
 .schedule .date,
 .schedule .time {
-	display: inline-flex;
-	align-items: center;
-	padding: 0px 40px;
+    display: inline-flex;
+    align-items: center;
+    padding: 0px 40px;
 }
 .schedule .date span,
 .schedule .time span {
-	font-size: 16px;
-	line-height: 26px;
+    font-size: 16px;
+    line-height: 26px;
 }
 .btnWrapper {
-	padding: 0px 32px 32px;
-	text-align: right;
+    padding: 0px 32px 32px;
+    text-align: right;
 }
 .btnWrapper button {
-	padding: 10px 32px;
-	background: #51ab86;
-	border-radius: 8px;
-	font-weight: 600;
-	font-size: 18px;
-	line-height: 28px;
-	color: #fff;
+    padding: 10px 32px;
+    background: #51ab86;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    color: #fff;
 }

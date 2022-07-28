@@ -1,96 +1,96 @@
 ::-webkit-scrollbar {
-	width: 10px;
+    width: 10px;
 }
 ::-webkit-scrollbar-track {
-	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 ::-webkit-scrollbar-thumb {
-	background-color: darkgrey;
-	border-radius: 16px;
+    background-color: darkgrey;
+    border-radius: 16px;
 }
 .appointments {
-	width: 100%;
-	max-width: 890px;
-	margin: auto;
-	background-color: #fff;
-	border-radius: 16px;
-	height: 580px;
-	overflow: auto;
+    width: 100%;
+    max-width: 890px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 16px;
+    height: 580px;
+    overflow: auto;
 }
 .appointmentTable {
-	width: 100%;
+    width: 100%;
 }
 .appointmentTable tr th,
 .appointmentTable tr td {
-	height: 72px;
-	vertical-align: middle;
+    height: 72px;
+    vertical-align: middle;
 }
 .appointmentTable tr th {
-	font-size: 18px;
-	line-height: 21px;
-	text-transform: capitalize;
+    font-size: 18px;
+    line-height: 21px;
+    text-transform: capitalize;
 }
 .appointmentTable tr td {
-	font-size: 16px;
-	line-height: 19px;
-	text-transform: capitalize;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: capitalize;
 }
 .tableHeader {
-	position: relative;
-	border-bottom: 1px solid #d1d2d3;
-	position: sticky;
-	top: 0px;
-	background-color: #fff;
+    position: relative;
+    border-bottom: 1px solid #d1d2d3;
+    position: sticky;
+    top: 0px;
+    background-color: #fff;
 }
 .appointmentTable tr:nth-child(even) {
-	background: #fff9f2;
+    background: #fff9f2;
 }
 .appointmentDate,
 .appointmentTable tr td:first-child {
-	padding-left: 65px;
+    padding-left: 65px;
 }
 .appointmentDate,
 .appointmentTable tr td:first-child {
-	padding-left: 65px;
+    padding-left: 65px;
 }
 .appointmentAction {
-	padding-right: 65px;
+    padding-right: 65px;
 }
 .iconDelete {
-	width: 100%;
-	max-width: 24px;
+    width: 100%;
+    max-width: 24px;
 }
 .tableFooter {
-	display: flex;
+    display: flex;
 }
 .appointmentFooter {
-	position: sticky;
-	bottom: 0px;
-	background-color: #fff;
-	padding: 15px 0px;
+    position: sticky;
+    bottom: 0px;
+    background-color: #fff;
+    padding: 15px 0px;
 }
 .appointmentFooter ul {
-	display: flex;
-	justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 .appointmentFooter ul li {
-	height: 34px;
-	width: 34px;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	cursor: pointer;
+    height: 34px;
+    width: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
 .appointmentFooter ul li:first-child,
 .appointmentFooter ul li:last-child {
-	width: auto;
-	margin: 0px 8px;
+    width: auto;
+    margin: 0px 8px;
 }
 .appointmentFooter ul li.active {
-	background: #ffb800;
-	color: #ffffff;
-	border-radius: 50%;
+    background: #ffb800;
+    color: #ffffff;
+    border-radius: 50%;
 }
 .iconDelete {
-	cursor: pointer;
+    cursor: pointer;
 }

@@ -1,15 +1,15 @@
 .btnPrimary {
-	background-color: #e59236;
-	border-radius: 8px;
-	padding: 6px 21px;
-	height: 40px;
-	font-weight: 600;
-	font-size: 16px;
-	line-height: 28px;
-	color: #fff;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	cursor: pointer;
-	border: none;
+    background-color: #e59236;
+    border-radius: 8px;
+    padding: 6px 21px;
+    height: 40px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 28px;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
 }

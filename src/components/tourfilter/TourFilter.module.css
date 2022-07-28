@@ -1,12 +1,12 @@
 .container {
-	display: flex;
-	width: 100%;
-	max-width: 1470px;
-	padding: 50px 15px;
-	margin-left: auto;
-	margin-right: auto;
+    display: flex;
+    width: 100%;
+    max-width: 1470px;
+    padding: 50px 15px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .apartmentContainer {
-	padding-left: 30px;
-	width: 100%;
+    padding-left: 30px;
+    width: 100%;
 }

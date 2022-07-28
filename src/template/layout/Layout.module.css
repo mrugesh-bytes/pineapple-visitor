@@ -1,10 +1,10 @@
 .layoutContainer {
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .layoutBg {
-	background: url(../../images/outer-bg.png) no-repeat bottom center;
-	position: relative;
+    background: url(../../images/outer-bg.png) no-repeat bottom center;
+    position: relative;
 }

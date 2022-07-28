@@ -1,5 +1,5 @@
-import axios from "axios";
-import { Dispatch } from "react";
+import axios from 'axios';
+import { Dispatch } from 'react';
 import {
     GET_AUTH_FAILURE,
     GET_AUTH_REQUEST,
@@ -7,7 +7,7 @@ import {
     GET_SIGNUP_REQUEST,
     GET_SIGNUP_SUCCESS,
     GET_SIGNUP_FAILURE,
-} from "../constants/auth.constant";
+} from '../constants/auth.constant';
 
 // Get Auth Request
 const getAuthRequest = () => {
@@ -60,11 +60,8 @@ export const getAuth: any = (loginDetails: any, onSuccess: any) => {
             .then((response: any) => {
                 if (response.data.statusCode === 200) {
                     dispatch(getAuthSuccess(response.data));
-                    localStorage.setItem("accessToken", response.data.token);
-                    localStorage.setItem(
-                        "visitor",
-                        JSON.stringify(response.data.visitor)
-                    );
+                    localStorage.setItem('accessToken', response.data.token);
+                    localStorage.setItem('visitor', JSON.stringify(response.data.visitor));
                     onSuccess(response.data);
                 } else {
                     throw new Error(response.data.message);
@@ -82,8 +79,8 @@ export const getRegister: any = (signupDetails: any, onSuccess: any) => {
             .post(`/visitor/register`, signupDetails)
             .then((response) => {
                 dispatch(getSignupSuccess(response.data.result));
-                localStorage.setItem("accessToken", response.data.result.token);
-                localStorage.setItem("email", signupDetails.email);
+                localStorage.setItem('accessToken', response.data.result.token);
+                localStorage.setItem('email', signupDetails.email);
                 onSuccess();
             })
             .catch((error) => dispatch(getSignupFailure(error)));

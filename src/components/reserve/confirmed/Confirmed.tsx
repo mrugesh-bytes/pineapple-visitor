@@ -1,8 +1,8 @@
-import React from "react";
-import styles from "./Confirmed.module.css";
+import React from 'react';
+import styles from './Confirmed.module.css';
 
 const Confirmed = () => {
-	return <div>Confirmed</div>;
+    return <div>Confirmed</div>;
 };
 
 export default Confirmed;

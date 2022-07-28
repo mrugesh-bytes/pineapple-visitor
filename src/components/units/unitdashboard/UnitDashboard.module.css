@@ -1,77 +1,77 @@
 .dashboardWrapper {
-	background: #ffffff;
-	border-radius: 16px;
-	width: 100%;
+    background: #ffffff;
+    border-radius: 16px;
+    width: 100%;
 }
 .title {
-	font-weight: 700;
-	font-size: 32px;
-	line-height: 32px;
-	color: #191c21;
-	padding: 28px;
-	border-bottom: 1px solid #191c21;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 32px;
+    color: #191c21;
+    padding: 28px;
+    border-bottom: 1px solid #191c21;
 }
 .unitDetails {
-	padding: 32px;
+    padding: 32px;
 }
 .imageContainer {
-	margin-bottom: 25px;
+    margin-bottom: 25px;
 }
 .imageContainer img {
-	width: 100%;
-	border-radius: 16px;
-	height: 343px;
-	object-fit: cover;
+    width: 100%;
+    border-radius: 16px;
+    height: 343px;
+    object-fit: cover;
 }
 .unitDetailTitle {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 .unitDetailTitle h2 {
-	font-weight: 600;
-	font-size: 32px;
-	line-height: 30px;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 30px;
 }
 .unitDetailTitle span {
-	font-weight: 600;
-	font-size: 22px;
-	line-height: 30px;
-	color: #e59236;
-	text-transform: capitalize;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 30px;
+    color: #e59236;
+    text-transform: capitalize;
 }
 .unitFacilities {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	margin-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 24px;
 }
 .unitFacility {
-	display: flex;
-	align-items: center;
-	margin-right: 32px;
+    display: flex;
+    align-items: center;
+    margin-right: 32px;
 }
 .unitFacility img {
-	object-fit: contain;
-	width: 20px;
+    object-fit: contain;
+    width: 20px;
 }
 .unitFacility span {
-	font-size: 16px;
-	line-height: 26px;
-	padding-left: 10px;
-	display: inline-block;
+    font-size: 16px;
+    line-height: 26px;
+    padding-left: 10px;
+    display: inline-block;
 }
 .btnReserve {
-	margin-top: 32px;
-	text-align: right;
+    margin-top: 32px;
+    text-align: right;
 }
 .btnReserve button {
-	background: #51ab86;
-	border-radius: 8px;
-	padding: 10px 15px;
-	font-weight: 600;
-	font-size: 18px;
-	line-height: 28px;
-	color: #fff;
-	cursor: pointer;
+    background: #51ab86;
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    color: #fff;
+    cursor: pointer;
 }

@@ -1,52 +1,52 @@
 .apartmentWrapper {
-	background: #fff;
-	border-radius: 16px;
+    background: #fff;
+    border-radius: 16px;
 }
 .title {
-	padding: 32px 32px 25px;
-	border-bottom: 1px solid #191c21;
-	font-weight: 700;
-	font-size: 32px;
-	line-height: 32px;
+    padding: 32px 32px 25px;
+    border-bottom: 1px solid #191c21;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 32px;
 }
 .appartmentDetails {
-	display: flex;
-	padding: 35px 25px 0px;
-	flex-wrap: wrap;
-	justify-content: space-between;
+    display: flex;
+    padding: 35px 25px 0px;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 .slideWrapper {
-	width: 100%;
-	max-width: 48.5%;
-	background: #ffffff;
-	box-shadow: 5px 10px 32px rgba(65, 65, 65, 0.09);
-	border-radius: 16px;
-	margin-bottom: 30px;
+    width: 100%;
+    max-width: 48.5%;
+    background: #ffffff;
+    box-shadow: 5px 10px 32px rgba(65, 65, 65, 0.09);
+    border-radius: 16px;
+    margin-bottom: 30px;
 }
 
 .sliderDetails {
-	padding: 16px 16px 24px;
+    padding: 16px 16px 24px;
 }
 .sliderDetails .sliderTitle {
-	font-weight: 600;
-	font-size: 18px;
-	line-height: 30px;
-	color: #191c21;
-	margin-bottom: 16px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 30px;
+    color: #191c21;
+    margin-bottom: 16px;
 }
 .facilities {
-	display: flex;
-	align-items: center;
-	flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
 .facilities .facility {
-	display: flex;
-	align-items: center;
-	margin-right: 32px;
+    display: flex;
+    align-items: center;
+    margin-right: 32px;
 }
 .facility span {
-	display: inline-block;
-	margin-left: 10px;
-	font-size: 16px;
-	line-height: 26px;
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 16px;
+    line-height: 26px;
 }
