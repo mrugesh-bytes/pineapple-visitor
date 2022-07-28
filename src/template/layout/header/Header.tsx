@@ -6,10 +6,10 @@ import { Link, useNavigate } from "react-router-dom";
 
 const Header = () => {
 	const navigate = useNavigate();
+
 	const handleLogout = () => {
 		localStorage.clear();
-
-		navigate("/");
+		navigate("/login", { replace: true });
 	};
 	return (
 		<div className={styles.fluid}>
