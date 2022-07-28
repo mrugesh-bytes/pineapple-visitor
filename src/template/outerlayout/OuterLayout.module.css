@@ -5,8 +5,9 @@
     justify-content: space-between;
 }
 .outerbg {
-    background: url(../../images/outer-bg.png) no-repeat bottom center;
-    position: relative;
+	background: url(../../images/outer-bg.png) no-repeat bottom center;
+	position: relative;
+	background-size: cover;
 }
 .outerbg:before,
 .outerbg:after {
