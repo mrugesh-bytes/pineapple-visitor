@@ -9,9 +9,9 @@ import TourFilterPage from "../pages/TourFilterPage";
 import SelfGuidePage from "../pages/SelfGuidePage";
 import ReservePage from "../pages/ReservePage";
 import Confirm from "../components/reserve/confirm/Confirm";
-import AppointmentPage from "../pages/AppointmentPage";
 import ForgotPasswordPage from "../pages/ForgotPasswordPage";
 import ProtectedRoutes from "./ProtectedRoutes";
+import AppointmentPage from "../pages/AppointmentPage";
 
 const Templates = () => {
     return (

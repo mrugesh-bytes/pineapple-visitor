@@ -5,12 +5,12 @@ import Button from "../../../components/common/button/Button";
 import { Link, useNavigate } from "react-router-dom";
 
 const Header = () => {
-	const navigate = useNavigate()
+	const navigate = useNavigate();
 	const handleLogout = () => {
 		localStorage.clear();
 
-        navigate('/');
-	}
+		navigate("/");
+	};
 	return (
 		<div className={styles.fluid}>
 			<div className={`${styles.outerContainer} ${styles.flexContainer}`}>
@@ -34,6 +34,9 @@ const Header = () => {
 							<Link to="/">Amenities</Link>
 						</li>
 						<li>
+							<Link to="/appointments">Appointments</Link>
+						</li>
+						<li>
 							<Link to="/">Leasing Center</Link>
 						</li>
 						<li>
@@ -41,7 +44,7 @@ const Header = () => {
 						</li>
 					</ul>
 					<div className={styles.btnWrapper}>
-						<Button onClick={handleLogout} text={'Logout'} />
+						<Button onClick={handleLogout} text={"Logout"} />
 					</div>
 				</div>
 			</div>
