@@ -15,7 +15,7 @@ const Header = () => {
 		<div className={styles.fluid}>
 			<div className={`${styles.outerContainer} ${styles.flexContainer}`}>
 				<div className={styles.logo}>
-					<Link to="/">
+					<Link to="/units">
 						<img src={logo} alt="pineapple logo"></img>
 					</Link>
 				</div>
