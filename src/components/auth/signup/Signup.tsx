@@ -19,10 +19,9 @@ const Signup = () => {
     });
 
     const [signupDetails, setSignupDetails]: any = useState({
-        name: 'test',
+        fullName: '',
         email: '',
         password: '',
-        phone: '9876543210',
     });
 
     const navigate = useNavigate();
@@ -48,7 +47,7 @@ const Signup = () => {
     };
 
     const onSuccess = () => {
-        navigate('/login');
+        navigate('/units');
     };
 
     return (
@@ -58,7 +57,7 @@ const Signup = () => {
             <form onSubmit={handleSignup} className={style.formWrapper}>
                 <div className={style.fieldWrapper}>
                     <label>Full Name</label>
-                    <input type="text" name="name" placeholder="Enter your full Name" onChange={handleSignupDetails} />
+                    <input type="text" name="fullName" placeholder="Enter your full Name" onChange={handleSignupDetails} />
                 </div>
                 <div className={style.fieldWrapper}>
                     <label>Email Id</label>

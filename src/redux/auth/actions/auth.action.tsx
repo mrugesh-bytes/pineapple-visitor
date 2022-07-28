@@ -75,13 +75,17 @@ export const getAuth: any = (loginDetails: any, onSuccess: any) => {
 export const getRegister: any = (signupDetails: any, onSuccess: any) => {
     return (dispatch: Dispatch<any>) => {
         dispatch(getSignupRequest());
-        return axios
+        axios
             .post(`/visitor/register`, signupDetails)
-            .then((response) => {
-                dispatch(getSignupSuccess(response.data.result));
-                localStorage.setItem('accessToken', response.data.result.token);
-                localStorage.setItem('email', signupDetails.email);
-                onSuccess();
+            .then((response: any) => {
+                if (response.data.statusCode === 201) {
+                    dispatch(getSignupSuccess(response.data));
+                    localStorage.setItem('accessToken', response.data.token);
+                    localStorage.setItem('visitor', JSON.stringify(response.data.visitor));
+                    onSuccess(response.data);
+                } else {
+                    throw new Error(response.data.message);
+                }
             })
             .catch((error) => dispatch(getSignupFailure(error)));
     };

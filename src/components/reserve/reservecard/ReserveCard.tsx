@@ -8,7 +8,7 @@ import { useSelector } from 'react-redux';
 
 const ReserveCard = () => {
     const unit = useSelector((state: any) => state.unitReducer.unit.data);
-    console.log(unit);
+    
     return (
         <div>
             <div className={styles.slideWrapper}>
