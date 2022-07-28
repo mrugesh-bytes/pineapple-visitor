@@ -1,5 +1,6 @@
 .cardInfo {
 	padding: 16px 22px 28px;
+	    width: 100%;
 }
 .cardInfo .cardTitle {
 	display: flex;
