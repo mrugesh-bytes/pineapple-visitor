@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { getLocation } from "../../../redux/location/actions/location.action";
 import {
 	getUnit,
-	getUnitsLocation,
 } from "../../../redux/unit/actions/unit.action";
 import styles from "./UnitCard.module.css";
 

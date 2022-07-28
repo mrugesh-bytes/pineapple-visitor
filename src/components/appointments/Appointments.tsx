@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Appointments.module.css";
-import iconDelete from "../../../images/icons/icon-delete.svg";
+import iconDelete from "../../images/icons/icon-delete.svg";
 
 const Appointments = () => {
 	return (

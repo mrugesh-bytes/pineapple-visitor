@@ -9,8 +9,10 @@ import iconShow from "../../../images/icons/icon-show.svg";
 import iconHide from "../../../images/icons/icon-hide.svg";
 import { useDispatch, useSelector } from "react-redux";
 import { getAuth } from "../../../redux/auth/actions/auth.action";
+import { AppContext } from "../../context/AppContect";
 
 const Login = () => {
+	const appContext = useContext(AppContext)
 	const [showPass, setShowPass] = useState(false);
 	const [loginDetails, setLoginDetails]: any = useState({
 		email: "",
@@ -20,8 +22,9 @@ const Login = () => {
 	const navigate = useNavigate();
 
 	const error = useSelector(
-		(state: any) => state?.authReducer?.error?.response?.statusText
+		(state: any) => state?.authReducer?.error
 	);
+
 	const loading = useSelector((state: any) => state?.authReducer?.loading);
 	const handleLoginDetails = (event: any) => {
 		setLoginDetails({
@@ -35,6 +38,8 @@ const Login = () => {
 		dispatch(getAuth(loginDetails, onSuccess));
 	};
 	const onSuccess = (data: any) => {
+		appContext.accessToken = data.token;
+        appContext.visitor = data.visitor;
 		navigate("/units");
 	};
 
