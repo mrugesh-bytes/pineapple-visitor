@@ -9,8 +9,8 @@ import TourFilterPage from "../pages/TourFilterPage";
 import SelfGuidePage from "../pages/SelfGuidePage";
 import ReservePage from "../pages/ReservePage";
 import Confirm from "../components/reserve/confirm/Confirm";
-import AppointmentPage from "../pages/AppointmentPage";
 import ForgotPasswordPage from "../pages/ForgotPasswordPage";
+import AppointmentPage from "../pages/AppointmentPage";
 
 const Templates = () => {
 	return (
@@ -22,7 +22,7 @@ const Templates = () => {
 					<Route path="self-guide" element={<SelfGuidePage />} />
 					<Route path="reserve" element={<ReservePage />} />
 					<Route path="confirm" element={<Confirm />} />
-					<Route path="appointment" element={<AppointmentPage />} />
+					<Route path="appointments" element={<AppointmentPage />} />
 				</Route>
 
 				<Route path="/" element={<OuterLayout />}>
