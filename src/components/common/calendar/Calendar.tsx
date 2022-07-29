@@ -14,7 +14,7 @@ const Calendar = ({ booked, setSelectedDate, minDate, maxDate }: any) => {
         <div>
             <ReactCalendar
                 tileClassName={({ date, view }): any => {
-                    if (booked.find((event: any) => event === moment(date).format('DD-MM-YYYY'))) {
+                    if (booked.find((event: any) => event === moment(date).local(true).format('DD-MM-YYYY'))) {
                         return 'booked';
                     }
                 }}
