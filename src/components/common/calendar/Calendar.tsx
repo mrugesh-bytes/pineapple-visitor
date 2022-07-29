@@ -11,7 +11,15 @@ const Calendar = ({ setSelectedDate, minDate, maxDate }: any) => {
 
     return (
         <div>
-            <ReactCalendar minDate={minDate} maxDate={maxDate} next2Label={null} prev2Label={null} onChange={handleChange} value={value} allowPartialRange={true} />
+            <ReactCalendar
+                minDate={minDate}
+                maxDate={maxDate}
+                next2Label={null}
+                prev2Label={null}
+                onChange={handleChange}
+                value={value}
+                allowPartialRange={true}
+            />
         </div>
     );
 };

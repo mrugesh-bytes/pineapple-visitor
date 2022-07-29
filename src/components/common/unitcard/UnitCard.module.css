@@ -1,40 +1,40 @@
 .cardInfo {
-	padding: 16px 22px 28px;
-	    width: 100%;
+    padding: 16px 22px 28px;
+    width: 100%;
 }
 .cardInfo .cardTitle {
-	display: flex;
-	justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 .cardInfo .cardTitle h2 {
-	font-weight: 600;
-	font-size: 22px;
-	line-height: 30px;
-	text-transform: capitalize;
-	color: #191c21;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 30px;
+    text-transform: capitalize;
+    color: #191c21;
 }
 .cardInfo .cardTitle span {
-	font-weight: 600;
-	font-size: 22px;
-	line-height: 30px;
-	text-transform: capitalize;
-	color: #e59236;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 30px;
+    text-transform: capitalize;
+    color: #e59236;
 }
 .cardInfo .facilities {
-	display: flex;
-	align-items: center;
-	margin-top: 16px;
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
 }
 .cardInfo .facilities .facility {
-	display: flex;
-	margin-right: 32px;
+    display: flex;
+    margin-right: 32px;
 }
 .cardInfo .facilities .facility:last-child {
-	margin-right: 0px;
+    margin-right: 0px;
 }
 .cardInfo .facility span {
-	display: inline-block;
-	font-size: 16px;
-	line-height: 26px;
-	margin-left: 8px;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 26px;
+    margin-left: 8px;
 }

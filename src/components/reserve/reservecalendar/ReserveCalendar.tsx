@@ -7,22 +7,22 @@ import moment from 'moment';
 
 const ReserveCalendar = () => {
     const [selectedDate, setSelectedDate] = useState(new Date());
-    const [minDate, setMinDate] = useState(new Date())
-    const [maxDate, setMaxDate] = useState(new Date())
+    const [minDate, setMinDate] = useState(new Date());
+    const [maxDate, setMaxDate] = useState(new Date());
     const navigate = useNavigate();
-    const unit = useSelector((state: any) => state.unitReducer.unit.data)
+    const unit = useSelector((state: any) => state.unitReducer.unit.data);
 
     const handleConfirm = () => {
         navigate('/confirm', { state: { selectedDate } });
     };
 
     useEffect(() => {
-        if(unit?.dates) {
-            setMinDate(new Date(unit.dates.split(',')[0]))
-            setMaxDate(new Date(unit.dates.split(',')[1]))
+        if (unit?.dates) {
+            setMinDate(new Date(unit.dates.split(',')[0]));
+            setMaxDate(new Date(unit.dates.split(',')[1]));
         }
-    }, [unit])
-    
+    }, [unit]);
+
     return (
         <div className={styles.calendarWrapper}>
             <Calendar minDate={minDate} maxDate={maxDate} setSelectedDate={setSelectedDate} />
