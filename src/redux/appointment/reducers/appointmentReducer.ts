@@ -1,9 +1,24 @@
-import { CREATE_APPOINTMENT_FAILURE, CREATE_APPOINTMENT_REQUEST, CREATE_APPOINTMENT_SUCCESS } from '../constants/appointment.constant';
+import {
+    CLEAR_APPOINTMENT_STATE,
+    CREATE_APPOINTMENT_FAILURE,
+    CREATE_APPOINTMENT_REQUEST,
+    CREATE_APPOINTMENT_SUCCESS,
+    GET_APPOINTMENTS_FAILURE,
+    GET_APPOINTMENTS_REQUEST,
+    GET_APPOINTMENTS_SUCCESS,
+} from '../constants/appointment.constant';
 
 const initialState = {
-    loading: false,
-    data: {},
-    error: '',
+    appointment: {
+        loading: false,
+        data: {},
+        error: '',
+    },
+    appointments: {
+        loading: false,
+        data: [],
+        error: '',
+    },
 };
 
 const appointmentReducer = (state = initialState, action: any) => {
@@ -11,23 +26,79 @@ const appointmentReducer = (state = initialState, action: any) => {
         case CREATE_APPOINTMENT_REQUEST:
             return {
                 ...state,
-                loading: true,
+                appointment: {
+                    ...state.appointment,
+                    loading: true,
+                },
             };
 
         case CREATE_APPOINTMENT_SUCCESS:
             return {
                 ...state,
-                loading: false,
-                data: action.payload,
+                appointment: {
+                    ...state.appointment,
+                    loading: false,
+                    data: action.payload,
+                    error: '',
+                },
             };
 
         case CREATE_APPOINTMENT_FAILURE:
             return {
                 ...state,
-                loading: false,
-                data: {},
-                error: action.payload,
+                appointment: {
+                    ...state.appointment,
+                    loading: false,
+                    data: {},
+                    error: action.payload,
+                },
             };
+
+        case CLEAR_APPOINTMENT_STATE:
+            return {
+                appointment: {
+                    loading: false,
+                    data: {},
+                    error: '',
+                },
+                appointments: {
+                    loading: false,
+                    data: [],
+                    error: '',
+                },
+            };
+
+        case GET_APPOINTMENTS_REQUEST:
+            return {
+                ...state,
+                appointments: {
+                    ...state.appointments,
+                    loading: true,
+                },
+            };
+
+        case GET_APPOINTMENTS_SUCCESS:
+            return {
+                ...state,
+                appointments: {
+                    ...state.appointments,
+                    loading: false,
+                    data: action.payload,
+                    error: '',
+                },
+            };
+
+        case GET_APPOINTMENTS_FAILURE:
+            return {
+                ...state,
+                appointments: {
+                    ...state.appointments,
+                    loading: false,
+                    data: [],
+                    error: action.payload,
+                },
+            };
+
         default:
             return state;
     }

@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from './Appointments.module.css';
 import iconDelete from '../../images/icons/icon-delete.svg';
+import { useDispatch, useSelector } from 'react-redux';
+import { getUserAppointments } from '../../redux/appointment/actions/appointment.action';
+import moment from 'moment';
 
 const Appointments = () => {
+    const dispatch = useDispatch();
+    const appointments = useSelector((state: any) => state.appointmentReducer.appointments.data);
+
+    useEffect(() => {
+        dispatch(getUserAppointments());
+    }, [dispatch]);
+
     return (
         <div className={styles.appointments}>
             <table className={styles.appointmentTable}>
@@ -12,56 +22,19 @@ const Appointments = () => {
                     <th>Unit Name</th>
                     <th className={styles.appointmentAction}></th>
                 </tr>
-                <tr>
-                    <td>24th july 2022</td>
-                    <td>Alaska</td>
-                    <td>Park towne Place</td>
-                    <td>
-                        <img className={styles.iconDelete} src={iconDelete} alt="Delete" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>23th july 2022</td>
-                    <td>Arizona</td>
-                    <td>Seniun Builders</td>
-                    <td>
-                        <img className={styles.iconDelete} src={iconDelete} alt="Delete" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>20th july 2022</td>
-                    <td>Arkansas</td>
-                    <td>CA Rental Solutions</td>
-                    <td>
-                        <img className={styles.iconDelete} src={iconDelete} alt="Delete" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>18th july 2022</td>
-                    <td>California</td>
-                    <td>Orchild Developers</td>
-                    <td>
-                        <img className={styles.iconDelete} src={iconDelete} alt="Delete" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>18th july 2022</td>
-                    <td>Colorado</td>
-                    <td>Two blue Slips</td>
-                    <td>
-                        <img className={styles.iconDelete} src={iconDelete} alt="Delete" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>15th june 2022</td>
-                    <td>Colorado</td>
-                    <td>Riverloft apartments</td>
-                    <td>
-                        <img className={styles.iconDelete} src={iconDelete} alt="Delete" />
-                    </td>
-                </tr>
+                {appointments.length > 0 &&
+                    appointments.map((appointment: any) => (
+                        <tr key={appointment.appointmentId}>
+                            <td>{moment(appointment.appointmentDate).format('Do MMMM YYYY')}</td>
+                            <td>{appointment.locationName}</td>
+                            <td>{appointment.unitName}</td>
+                            <td>
+                                <img className={styles.iconDelete} src={iconDelete} alt="Delete" />
+                            </td>
+                        </tr>
+                    ))}
             </table>
-            <div className={styles.appointmentFooter}>
+            {/* <div className={styles.appointmentFooter}>
                 <ul>
                     <li>Previous</li>
                     <li className={styles.active}>1</li>
@@ -69,7 +42,7 @@ const Appointments = () => {
                     <li>3</li>
                     <li>Next</li>
                 </ul>
-            </div>
+            </div> */}
         </div>
     );
 };
