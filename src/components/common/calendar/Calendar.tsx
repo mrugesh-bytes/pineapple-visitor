@@ -1,5 +1,12 @@
+import moment from 'moment';
 import React, { useState } from 'react';
 import ReactCalendar from 'react-calendar';
+
+const booked = [
+      '30-07-2022',
+      '02-08-2022',
+      '03-08-2022'
+  ]
 
 const Calendar = ({ setSelectedDate, minDate, maxDate }: any) => {
     const [value, onChange] = useState(new Date());
@@ -11,7 +18,11 @@ const Calendar = ({ setSelectedDate, minDate, maxDate }: any) => {
 
     return (
         <div>
-            <ReactCalendar minDate={minDate} maxDate={maxDate} next2Label={null} prev2Label={null} onChange={handleChange} value={value} allowPartialRange={true} />
+            <ReactCalendar tileClassName={({ date, view }):any => {
+      if(booked.find(event => event===moment(date).format("DD-MM-YYYY"))){
+       return  'booked'
+      }
+    }} tileDisabled={({ date }) => date.getDay() === 0}  minDate={minDate} maxDate={maxDate} next2Label={null} prev2Label={null} onChange={handleChange} value={value} allowPartialRange={true} />
         </div>
     );
 };
