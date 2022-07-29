@@ -87,6 +87,7 @@ table {
 .react-calendar .react-calendar__month-view__days .react-calendar__tile.booked {
     color: #B2B3B5;
     pointer-events: none;
+   cursor: not-allowed;
 }
 .react-calendar .react-calendar__month-view__days .react-calendar__tile.booked:before{
     position: absolute;
