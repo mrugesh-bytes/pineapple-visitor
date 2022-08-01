@@ -17,8 +17,8 @@ const Dashboard = () => {
 
     const handleConfirm = () => {
         const appointment = {
-            start_time: moment(selectedDate).utc().startOf('date').format(),
-            end_time: moment(selectedDate).utc().endOf('date').format(),
+            start_time: moment(moment(selectedDate).startOf('date').format()).utcOffset(0, true).format(),
+            end_time: moment(moment(selectedDate).endOf('date').format()).utcOffset(0, true).format(),
             locker_number: `${unit.locker_number}`,
             unit: unit.id,
             location: unit.location.id,

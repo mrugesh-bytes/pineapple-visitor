@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import Layout from './layout/Layout';
 import OuterLayout from './outerlayout/OuterLayout';
 import LoginPage from '../pages/LoginPage';
@@ -12,6 +12,7 @@ import Confirm from '../components/reserve/confirm/Confirm';
 import ForgotPasswordPage from '../pages/ForgotPasswordPage';
 import ProtectedRoutes from './ProtectedRoutes';
 import AppointmentPage from '../pages/AppointmentPage';
+import {} from 'react-router-dom';
 
 const Templates = () => {
     return (
@@ -19,6 +20,7 @@ const Templates = () => {
             <Routes>
                 <Route path="/" element={<ProtectedRoutes />}>
                     <Route path="/" element={<Layout />}>
+                        <Route index element={<Navigate to="/units" />} />
                         <Route path="/units" element={<UnitPage />} />
                         <Route path="/tour-filter" element={<TourFilterPage />} />
                         <Route path="/self-guide" element={<SelfGuidePage />} />

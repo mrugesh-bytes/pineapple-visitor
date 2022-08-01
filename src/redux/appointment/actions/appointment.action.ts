@@ -93,3 +93,13 @@ export const getUserAppointments: any = () => {
             .catch((error) => dispatch(getAppointmentsFailure(error)));
     };
 };
+
+export const deleteUserAppointment: any = (id: string) => {
+    return (dispatch: Dispatch<any>) => {
+        axios.delete(`appointments/${id}`).then((response: any) => {
+            if (response.data.statusCode === 200) {
+                dispatch(getUserAppointments());
+            }
+        });
+    };
+};

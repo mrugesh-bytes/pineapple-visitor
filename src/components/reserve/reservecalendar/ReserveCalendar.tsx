@@ -12,7 +12,7 @@ const ReserveCalendar = () => {
     const [maxDate, setMaxDate] = useState(new Date());
     const navigate = useNavigate();
     const unit = useSelector((state: any) => state.unitReducer.unit.data);
-    console.log(unit);
+
     const handleConfirm = () => {
         navigate('/confirm', { state: { selectedDate } });
     };

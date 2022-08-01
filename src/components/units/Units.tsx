@@ -9,7 +9,7 @@ const Units = () => {
     const [open, setOpen]: any = useState(true);
     return (
         <>
-            <Popup open={open} setOpen={setOpen} bodyData={<CompleteProfile />} shouldCloseOnOverlayClick={false} />
+            {/* <Popup open={open} setOpen={setOpen} bodyData={<CompleteProfile />} shouldCloseOnOverlayClick={false} /> */}
             <div className={styles.container}>
                 <div className={styles.unitCardWrapper}>
                     <UnitCard />

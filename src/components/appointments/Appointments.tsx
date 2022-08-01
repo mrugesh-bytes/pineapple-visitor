@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import styles from './Appointments.module.css';
 import iconDelete from '../../images/icons/icon-delete.svg';
 import { useDispatch, useSelector } from 'react-redux';
-import { getUserAppointments } from '../../redux/appointment/actions/appointment.action';
+import { deleteUserAppointment, getUserAppointments } from '../../redux/appointment/actions/appointment.action';
 import moment from 'moment';
 
 const Appointments = () => {
@@ -12,6 +12,10 @@ const Appointments = () => {
     useEffect(() => {
         dispatch(getUserAppointments());
     }, [dispatch]);
+
+    const handleDelete = (id: string) => {
+        dispatch(deleteUserAppointment(id))
+    }
 
     return (
         <div className={styles.appointments}>
@@ -29,7 +33,7 @@ const Appointments = () => {
                             <td>{appointment.locationName}</td>
                             <td>{appointment.unitName}</td>
                             <td>
-                                <img className={styles.iconDelete} src={iconDelete} alt="Delete" />
+                                <img onClick={() => handleDelete(appointment.appointmentId)} className={styles.iconDelete} src={iconDelete} alt="Delete" />
                             </td>
                         </tr>
                     ))}
