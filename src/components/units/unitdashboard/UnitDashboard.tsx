@@ -12,7 +12,7 @@ const UnitDashboard = (props: any) => {
     const unit = useSelector((state: any) => state.unitReducer.unit.data);
 
     const handleReserve = () => {
-        navigate('/reserve', {state: {unitId: unit.id}});
+        navigate('/reserve', { state: { unitId: unit.id } });
     };
 
     return (

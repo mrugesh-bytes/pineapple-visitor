@@ -29,13 +29,13 @@ const ReserveCalendar = () => {
                 setMinDate(startDate);
                 setMaxDate(endDate);
             } else {
-                return
+                return;
             }
         }
         if (unit?.appointments?.length > 0) {
-            const bookedDates: any = []
-            unit.appointments.map((appointment: any) =>  bookedDates.push(moment(appointment.start_time).format('DD-MM-YYYY')))
-            setBooked(bookedDates)
+            const bookedDates: any = [];
+            unit.appointments.map((appointment: any) => bookedDates.push(moment(appointment.start_time).format('DD-MM-YYYY')));
+            setBooked(bookedDates);
         }
     }, [unit]);
 

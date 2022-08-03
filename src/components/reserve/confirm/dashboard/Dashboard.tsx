@@ -11,7 +11,7 @@ import { clearUnitState, getUnit } from '../../../../redux/unit/actions/unit.act
 const Dashboard = () => {
     const location: any = useLocation();
     const selectedDate = location.state.selectedDate;
-    const unitId = location.state.unitId
+    const unitId = location.state.unitId;
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const unit = useSelector((state: any) => state.unitReducer.unit.data);
@@ -35,7 +35,7 @@ const Dashboard = () => {
 
     const handleOkay = () => {
         dispatch(clearAppointmentState());
-        dispatch(clearUnitState())
+        dispatch(clearUnitState());
         navigate('/appointments');
     };
 
