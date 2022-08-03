@@ -12,7 +12,7 @@ const UnitDashboard = (props: any) => {
     const unit = useSelector((state: any) => state.unitReducer.unit.data);
 
     const handleReserve = () => {
-        navigate('/reserve', {state: {unitId: unit.id}});
+        navigate('/reserve', { state: { unitId: unit.id } });
     };
 
     return (
@@ -49,7 +49,7 @@ const UnitDashboard = (props: any) => {
                     </div>
                 </>
             )}
-            {Object.keys(unit).length === 0 && <img src={noDetails} alt="No Details" />}
+            {Object.keys(unit).length === 0 && <img className={styles.noDataImg} src={noDetails} alt="No Details" />}
         </div>
     );
 };
