@@ -22,16 +22,23 @@ const Signup = () => {
         fullName: '',
         email: '',
         password: '',
+        phoneNumber: '',
     });
 
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
     const handleSignupDetails = (event: any) => {
-        setSignupDetails({
-            ...signupDetails,
-            [event.target.name]: event.target.value,
-        });
+        if (event.target.name === 'phoneNumber') {
+            const result = event.target.value.replace(/\D/g, '');
+            console.log(result);
+            setSignupDetails({ ...signupDetails, [event.target.name]: result });
+        } else {
+            setSignupDetails({
+                ...signupDetails,
+                [event.target.name]: event.target.value,
+            });
+        }
     };
 
     const handleSignup = (e: any) => {
@@ -90,6 +97,19 @@ const Signup = () => {
                             <img src={!showConfirmPass ? iconShow : iconHide} alt="Eye" />
                         </div>
                     </div>
+                </div>
+                <div className={style.fieldWrapper}>
+                    <label>Phone Number</label>
+                    <input
+                        type="tel"
+                        name="phoneNumber"
+                        pattern="[0-9]{10}"
+                        value={signupDetails.phoneNumber}
+                        placeholder="Enter your phone number"
+                        maxLength={10}
+                        minLength={10}
+                        onChange={handleSignupDetails}
+                    />
                 </div>
                 <div className={style.submitWrapper}>
                     <button type="submit">Sign Up</button>

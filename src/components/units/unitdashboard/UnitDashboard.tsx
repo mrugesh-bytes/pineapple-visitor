@@ -49,7 +49,7 @@ const UnitDashboard = (props: any) => {
                     </div>
                 </>
             )}
-            {Object.keys(unit).length === 0 && <img src={noDetails} alt="No Details" />}
+            {Object.keys(unit).length === 0 && <img className={styles.noDataImg} src={noDetails} alt="No Details" />}
         </div>
     );
 };
