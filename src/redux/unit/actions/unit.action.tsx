@@ -7,6 +7,7 @@ import {
     GET_UNIT_FAILURE,
     GET_UNIT_SUCCESS,
     GET_UNIT_REQUEST,
+    CLEAR_UNIT_STATE,
 } from '../constants/unit.constant';
 
 // Get Units Location Request
@@ -51,6 +52,12 @@ const getUnitFailure = (locationError: any) => {
     };
 };
 
+const clearUnitStateAction = () => {
+    return {
+        type: CLEAR_UNIT_STATE
+    }
+}
+
 // Get Unit Location Dispatch
 export const getUnit: any = (id: string) => {
     return (dispatch: Dispatch<any>) => {
@@ -61,3 +68,7 @@ export const getUnit: any = (id: string) => {
             .catch((error) => dispatch(getUnitFailure(error)));
     };
 };
+
+export const clearUnitState: any = () => {
+    return (dispatch: Dispatch<any>) => dispatch(clearUnitStateAction())
+}

@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux';
 import moment from 'moment';
 
 const ReserveCalendar = () => {
-    const [selectedDate, setSelectedDate] = useState(new Date());
+    const [selectedDate, setSelectedDate] = useState('');
     const [minDate, setMinDate] = useState(new Date());
     const [booked, setBooked]: any = useState([]);
     const [maxDate, setMaxDate] = useState(new Date());
@@ -14,16 +14,28 @@ const ReserveCalendar = () => {
     const unit = useSelector((state: any) => state.unitReducer.unit.data);
 
     const handleConfirm = () => {
-        navigate('/confirm', { state: { selectedDate } });
+        if (selectedDate) navigate('/confirm', { state: { selectedDate, unitId: unit.id } });
     };
 
     useEffect(() => {
         if (unit?.dates) {
-            setMinDate(new Date(unit.dates.split(',')[0]));
-            setMaxDate(new Date(unit.dates.split(',')[1]));
+            const startDate = new Date(unit.dates.split(',')[0]);
+            const endDate = new Date(unit.dates.split(',')[1]);
+            const currentDate = new Date();
+            if (startDate < currentDate && currentDate < endDate) {
+                setMinDate(currentDate);
+                setMaxDate(endDate);
+            } else if (startDate > currentDate) {
+                setMinDate(startDate);
+                setMaxDate(endDate);
+            } else {
+                return
+            }
         }
-        if (unit?.appointments.length > 0) {
-            unit.appointments.map((appointment: any) => setBooked([...booked, moment(appointment.start_time).format('DD-MM-YYYY')]));
+        if (unit?.appointments?.length > 0) {
+            const bookedDates: any = []
+            unit.appointments.map((appointment: any) =>  bookedDates.push(moment(appointment.start_time).format('DD-MM-YYYY')))
+            setBooked(bookedDates)
         }
     }, [unit]);
 

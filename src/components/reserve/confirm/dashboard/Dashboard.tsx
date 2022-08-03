@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from './Dashboard.module.css';
 import bannerImg from '../../../../images/core/appointment-confirmation.png';
 import iconCalender from '../../../../images/icons/icon-calendar.svg';
@@ -6,14 +6,20 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import moment from 'moment';
 import { useDispatch, useSelector } from 'react-redux';
 import { clearAppointmentState, createAppointment } from '../../../../redux/appointment/actions/appointment.action';
+import { clearUnitState, getUnit } from '../../../../redux/unit/actions/unit.action';
 
 const Dashboard = () => {
     const location: any = useLocation();
     const selectedDate = location.state.selectedDate;
+    const unitId = location.state.unitId
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const unit = useSelector((state: any) => state.unitReducer.unit.data);
     const appointmentData = useSelector((state: any) => state?.appointmentReducer?.appointment?.data);
+
+    useEffect(() => {
+        if (Object.keys(unit).length === 0) dispatch(getUnit(unitId));
+    }, []);
 
     const handleConfirm = () => {
         const appointment = {
@@ -29,6 +35,7 @@ const Dashboard = () => {
 
     const handleOkay = () => {
         dispatch(clearAppointmentState());
+        dispatch(clearUnitState())
         navigate('/appointments');
     };
 

@@ -5,6 +5,7 @@ import {
     GET_UNIT_FAILURE,
     GET_UNIT_REQUEST,
     GET_UNIT_SUCCESS,
+    CLEAR_UNIT_STATE,
 } from '../constants/unit.constant';
 
 const initialState = {
@@ -81,6 +82,20 @@ const unitReducer = (state = initialState, action: any) => {
                     loading: false,
                     data: {},
                     error: action.payload,
+                },
+            };
+
+        case CLEAR_UNIT_STATE:
+            return {
+                units: {
+                    loading: false,
+                    data: [],
+                    error: '',
+                },
+                unit: {
+                    loading: false,
+                    data: {},
+                    error: '',
                 },
             };
 

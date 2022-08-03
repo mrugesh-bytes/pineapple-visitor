@@ -1,13 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Slider from '../../common/slider/Slider';
 import styles from './ReserveCard.module.css';
 import iconArea from '../../../images/icons/icon-area.svg';
 import iconBath from '../../../images/icons/icon-bath.svg';
 import iconBeds from '../../../images/icons/icon-beds.svg';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { useLocation } from 'react-router-dom';
+import { getUnit } from '../../../redux/unit/actions/unit.action';
 
 const ReserveCard = () => {
+    const location: any = useLocation();
+    const dispatch = useDispatch();
     const unit = useSelector((state: any) => state.unitReducer.unit.data);
+
+    useEffect(() => {
+        if (Object.keys(unit).length === 0) dispatch(getUnit(location.state.unitId));
+    }, []);
 
     return (
         <div>
