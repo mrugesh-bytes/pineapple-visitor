@@ -28,7 +28,7 @@ export const getLocation: any = () => {
     return (dispatch: Dispatch<any>) => {
         dispatch(getLocationRequest());
         return axios
-            .get(`http://192.168.10.143:5000/locations`)
+            .get(`/locations`)
             .then((response) => dispatch(getLocationSuccess(response.data.locations)))
             .catch((error) => dispatch(getLocationFailure(error)));
     };

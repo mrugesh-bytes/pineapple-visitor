@@ -43,7 +43,7 @@ const Appointments = () => {
                         </tr>
                     ))}
             </table>
-            {/* <div className={styles.appointmentFooter}>
+            <div className={styles.appointmentFooter}>
                 <ul>
                     <li>Previous</li>
                     <li className={styles.active}>1</li>
@@ -51,7 +51,7 @@ const Appointments = () => {
                     <li>3</li>
                     <li>Next</li>
                 </ul>
-            </div> */}
+            </div>
         </div>
     );
 };

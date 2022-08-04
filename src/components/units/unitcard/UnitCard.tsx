@@ -9,7 +9,7 @@ const UnitCard = () => {
     const [unitId, setUnitId] = useState('');
     const dispatch = useDispatch();
     const [units, setUnits] = useState([]);
-    const locations = useSelector((state: any) => state.locationReducer.data);
+    const locations = useSelector((state: any) => state?.locationReducer?.data);
 
     useEffect(() => {
         dispatch(getLocation());

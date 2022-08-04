@@ -80,6 +80,7 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    color: #8c8d90;
 }
 .appointmentFooter ul li:first-child,
 .appointmentFooter ul li:last-child {

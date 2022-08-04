@@ -63,6 +63,14 @@
     transition: all ease 0.3s;
     font-family: 'Rubik', sans-serif;
 }
+.invalidCred {
+    color: #f5004a;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 28px;
+    position: absolute;
+    padding-left: 14px;
+}
 .fieldWrapper input::placeholder {
     color: #d1d2d3;
 }
@@ -77,6 +85,8 @@
     text-decoration: none;
     text-align: left;
     display: block;
+    display: inline-block;
+    margin-top: 10px;
 }
 .submitWrapper {
     margin-top: 24px;

@@ -14,6 +14,7 @@ const Signup = () => {
     const [showPass, setShowPass] = useState(false);
     const [showConfirmPass, setShowConfirmPass] = useState(false);
     const [error, setError] = useState({
+        fullName: false,
         emailError: false,
         passwordError: false,
     });
@@ -29,9 +30,13 @@ const Signup = () => {
     const dispatch = useDispatch();
 
     const handleSignupDetails = (event: any) => {
+        setError({
+            fullName: false,
+            emailError: false,
+            passwordError: false,
+        });
         if (event.target.name === 'phoneNumber') {
             const result = event.target.value.replace(/\D/g, '');
-            console.log(result);
             setSignupDetails({ ...signupDetails, [event.target.name]: result });
         } else {
             setSignupDetails({
@@ -64,11 +69,25 @@ const Signup = () => {
             <form onSubmit={handleSignup} className={style.formWrapper}>
                 <div className={style.fieldWrapper}>
                     <label>Full Name</label>
-                    <input type="text" name="fullName" placeholder="Enter your full Name" onChange={handleSignupDetails} />
+                    <input
+                        type="text"
+                        name="fullName"
+                        placeholder="Enter your full Name"
+                        className={error.fullName ? 'error' : ''}
+                        required
+                        onChange={handleSignupDetails}
+                    />
                 </div>
                 <div className={style.fieldWrapper}>
                     <label>Email Id</label>
-                    <input type="email" name="email" placeholder="Enter your email address" onChange={handleSignupDetails} />
+                    <input
+                        type="email"
+                        name="email"
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                        placeholder="Enter your email address"
+                        onChange={handleSignupDetails}
+                        required
+                    />
                 </div>
                 <div className={style.fieldWrapper}>
                     <label>Password</label>
@@ -78,6 +97,7 @@ const Signup = () => {
                             name="password"
                             placeholder="Enter your password"
                             onChange={handleSignupDetails}
+                            required
                         />
                         <div className={style.iconToggle} onClick={() => setShowPass(!showPass)}>
                             <img src={!showPass ? iconShow : iconHide} alt="Eye" />
@@ -90,8 +110,10 @@ const Signup = () => {
                         <input
                             type={showConfirmPass ? 'text' : 'password'}
                             name="confirmPassword"
+                            required
                             placeholder="Enter your password"
                             onChange={handleSignupDetails}
+                            className={error.passwordError ? 'error' : ''}
                         />
                         <div className={style.iconToggle} onClick={() => setShowConfirmPass(!showConfirmPass)}>
                             <img src={!showConfirmPass ? iconShow : iconHide} alt="Eye" />
@@ -109,6 +131,7 @@ const Signup = () => {
                         maxLength={10}
                         minLength={10}
                         onChange={handleSignupDetails}
+                        required
                     />
                 </div>
                 <div className={style.submitWrapper}>

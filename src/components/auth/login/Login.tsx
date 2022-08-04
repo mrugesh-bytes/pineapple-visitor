@@ -18,6 +18,7 @@ const Login = () => {
         email: '',
         password: '',
     });
+
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
@@ -45,10 +46,17 @@ const Login = () => {
         <div className={style.container}>
             <h2 className={style.authTitle}>Welcome Back!</h2>
             <p className={style.authDesc}>Hey 👋 Enter your login credentials to sign in</p>
-            <form className={style.formWrapper}>
+            <form onSubmit={handleSignIn} className={style.formWrapper}>
                 <div className={style.fieldWrapper}>
                     <label>Email Id</label>
-                    <input type="email" name="email" placeholder="Enter your email address" onChange={handleLoginDetails} />
+                    <input
+                        type="email"
+                        name="email"
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                        placeholder="Enter your email address"
+                        onChange={handleLoginDetails}
+                        required
+                    />
                 </div>
                 <div className={style.fieldWrapper}>
                     <label>Password</label>
@@ -58,19 +66,20 @@ const Login = () => {
                             name="password"
                             placeholder="Enter your password"
                             onChange={handleLoginDetails}
+                            required
+                            minLength={8}
                         />
                         <div onClick={() => setShowPass(!showPass)} className={style.iconToggle}>
                             <img src={!showPass ? iconShow : iconHide} alt="Eye" />
                         </div>
                     </div>
+                    {error && <span className={style.invalidCred}>Invalid Credentials</span>}
                 </div>
                 <Link className={style.forgetPassword} to="/forgot-password">
                     Trouble to get sign in?
                 </Link>
                 <div className={style.submitWrapper}>
-                    <button onClick={handleSignIn} type="submit">
-                        Sign In
-                    </button>
+                    <button type="submit">Sign In</button>
                 </div>
             </form>
             <div className={style.signinBorder}>
