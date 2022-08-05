@@ -18,7 +18,7 @@ const Calendar = ({ booked, setSelectedDate, minDate, maxDate }: any) => {
                         return 'booked';
                     }
                 }}
-                tileDisabled={({ date }) => date.getDay() === 0}
+                // tileDisabled={({ date }) => date.getDay() === 0}
                 minDate={minDate}
                 maxDate={maxDate}
                 next2Label={null}

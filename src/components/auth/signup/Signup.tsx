@@ -8,7 +8,7 @@ import iconInsta from '../../../images/icons/icon-instagram.svg';
 import iconShow from '../../../images/icons/icon-show.svg';
 import iconHide from '../../../images/icons/icon-hide.svg';
 import { getRegister } from '../../../redux/auth/actions/auth.action';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import Loader from '../../common/loader/Loader';
 
 const Signup = () => {
@@ -29,6 +29,7 @@ const Signup = () => {
 
     const navigate = useNavigate();
     const dispatch = useDispatch();
+    const loading = useSelector((state: any) => state.authReducer.loading);
 
     const handleSignupDetails = (event: any) => {
         setError({
@@ -65,7 +66,7 @@ const Signup = () => {
 
     return (
         <>
-            <Loader />
+            {loading && <Loader />}
             <div className={style.container}>
                 <h2 className={style.authTitle}>Welcome Back!</h2>
                 <p className={style.authDesc}>Hey 👋 Enter your details to signup</p>
