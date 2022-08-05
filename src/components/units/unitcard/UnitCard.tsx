@@ -31,7 +31,7 @@ const UnitCard = () => {
         <div className={styles.cardWrapper}>
             <form onSubmit={handleDetails} className={styles.unitForm}>
                 <div className={styles.formField}>
-                    <label className={styles.cardTitle}>Select Apartment:</label>
+                    <label className={styles.cardTitle}>Select Location</label>
                     <select className={styles.unitSelect} defaultValue="" onChange={(ev) => setLocationId(ev.target.value)}>
                         <option value="">Select Location</option>
                         {locations.length > 0 && locations?.map((location: any) => <option value={location.id}>{location.name}</option>)}

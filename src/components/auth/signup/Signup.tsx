@@ -9,6 +9,7 @@ import iconShow from '../../../images/icons/icon-show.svg';
 import iconHide from '../../../images/icons/icon-hide.svg';
 import { getRegister } from '../../../redux/auth/actions/auth.action';
 import { useDispatch } from 'react-redux';
+import Loader from '../../common/loader/Loader';
 
 const Signup = () => {
     const [showPass, setShowPass] = useState(false);
@@ -63,99 +64,102 @@ const Signup = () => {
     };
 
     return (
-        <div className={style.container}>
-            <h2 className={style.authTitle}>Welcome Back!</h2>
-            <p className={style.authDesc}>Hey 👋 Enter your details to signup</p>
-            <form onSubmit={handleSignup} className={style.formWrapper}>
-                <div className={style.fieldWrapper}>
-                    <label>Full Name</label>
-                    <input
-                        type="text"
-                        name="fullName"
-                        placeholder="Enter your full Name"
-                        className={error.fullName ? 'error' : ''}
-                        required
-                        onChange={handleSignupDetails}
-                    />
-                </div>
-                <div className={style.fieldWrapper}>
-                    <label>Email Id</label>
-                    <input
-                        type="email"
-                        name="email"
-                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-                        placeholder="Enter your email address"
-                        onChange={handleSignupDetails}
-                        required
-                    />
-                </div>
-                <div className={style.fieldWrapper}>
-                    <label>Password</label>
-                    <div className={style.passwordWrapper}>
+        <>
+            <Loader />
+            <div className={style.container}>
+                <h2 className={style.authTitle}>Welcome Back!</h2>
+                <p className={style.authDesc}>Hey 👋 Enter your details to signup</p>
+                <form onSubmit={handleSignup} className={style.formWrapper}>
+                    <div className={style.fieldWrapper}>
+                        <label>Full Name</label>
                         <input
-                            type={showPass ? 'text' : 'password'}
-                            name="password"
-                            placeholder="Enter your password"
+                            type="text"
+                            name="fullName"
+                            placeholder="Enter your full Name"
+                            className={error.fullName ? 'error' : ''}
+                            required
+                            onChange={handleSignupDetails}
+                        />
+                    </div>
+                    <div className={style.fieldWrapper}>
+                        <label>Email Id</label>
+                        <input
+                            type="email"
+                            name="email"
+                            pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"
+                            placeholder="Enter your email address"
                             onChange={handleSignupDetails}
                             required
                         />
-                        <div className={style.iconToggle} onClick={() => setShowPass(!showPass)}>
-                            <img src={!showPass ? iconShow : iconHide} alt="Eye" />
+                    </div>
+                    <div className={style.fieldWrapper}>
+                        <label>Password</label>
+                        <div className={style.passwordWrapper}>
+                            <input
+                                type={showPass ? 'text' : 'password'}
+                                name="password"
+                                placeholder="Enter your password"
+                                onChange={handleSignupDetails}
+                                required
+                            />
+                            <div className={style.iconToggle} onClick={() => setShowPass(!showPass)}>
+                                <img src={!showPass ? iconShow : iconHide} alt="Eye" />
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div className={style.fieldWrapper}>
-                    <label>Confirm Password</label>
-                    <div className={style.passwordWrapper}>
+                    <div className={style.fieldWrapper}>
+                        <label>Confirm Password</label>
+                        <div className={style.passwordWrapper}>
+                            <input
+                                type={showConfirmPass ? 'text' : 'password'}
+                                name="confirmPassword"
+                                required
+                                placeholder="Enter your password"
+                                onChange={handleSignupDetails}
+                                className={error.passwordError ? 'error' : ''}
+                            />
+                            <div className={style.iconToggle} onClick={() => setShowConfirmPass(!showConfirmPass)}>
+                                <img src={!showConfirmPass ? iconShow : iconHide} alt="Eye" />
+                            </div>
+                        </div>
+                    </div>
+                    <div className={style.fieldWrapper}>
+                        <label>Phone Number</label>
                         <input
-                            type={showConfirmPass ? 'text' : 'password'}
-                            name="confirmPassword"
-                            required
-                            placeholder="Enter your password"
+                            type="tel"
+                            name="phoneNumber"
+                            pattern="[0-9]{10}"
+                            value={signupDetails.phoneNumber}
+                            placeholder="Enter your phone number"
+                            maxLength={10}
+                            minLength={10}
                             onChange={handleSignupDetails}
-                            className={error.passwordError ? 'error' : ''}
+                            required
                         />
-                        <div className={style.iconToggle} onClick={() => setShowConfirmPass(!showConfirmPass)}>
-                            <img src={!showConfirmPass ? iconShow : iconHide} alt="Eye" />
-                        </div>
+                    </div>
+                    <div className={style.submitWrapper}>
+                        <button type="submit">Sign Up</button>
+                    </div>
+                </form>
+                <div className={style.signinBorder}>
+                    <span>Or Sign in with</span>
+                </div>
+                <div className={style.socialContainer}>
+                    <div className={style.iconWrapper}>
+                        <img src={iconGmail} alt="Icon Google" />
+                    </div>
+                    <div className={style.iconWrapper}>
+                        <img src={iconApple} alt="Icon Apple" />
+                    </div>
+                    <div className={style.iconWrapper}>
+                        <img src={iconFacebook} alt="Icon Facebook" />
+                    </div>
+                    <div className={style.iconWrapper}>
+                        <img src={iconInsta} alt="Icon Instagram" />
                     </div>
                 </div>
-                <div className={style.fieldWrapper}>
-                    <label>Phone Number</label>
-                    <input
-                        type="tel"
-                        name="phoneNumber"
-                        pattern="[0-9]{10}"
-                        value={signupDetails.phoneNumber}
-                        placeholder="Enter your phone number"
-                        maxLength={10}
-                        minLength={10}
-                        onChange={handleSignupDetails}
-                        required
-                    />
-                </div>
-                <div className={style.submitWrapper}>
-                    <button type="submit">Sign Up</button>
-                </div>
-            </form>
-            <div className={style.signinBorder}>
-                <span>Or Sign in with</span>
             </div>
-            <div className={style.socialContainer}>
-                <div className={style.iconWrapper}>
-                    <img src={iconGmail} alt="Icon Google" />
-                </div>
-                <div className={style.iconWrapper}>
-                    <img src={iconApple} alt="Icon Apple" />
-                </div>
-                <div className={style.iconWrapper}>
-                    <img src={iconFacebook} alt="Icon Facebook" />
-                </div>
-                <div className={style.iconWrapper}>
-                    <img src={iconInsta} alt="Icon Instagram" />
-                </div>
-            </div>
-        </div>
+        </>
     );
 };
 

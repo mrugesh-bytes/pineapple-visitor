@@ -18,7 +18,8 @@
     align-items: center;
     justify-content: space-between;
 }
-.link {
+.link,
+.copyright {
     color: #fff;
 }
 .link a {
@@ -30,6 +31,10 @@
     display: flex;
     align-items: center;
     cursor: pointer;
+}
+.copyright {
+    font-size: 14px;
+    line-height: 32px;
 }
 .link img {
     margin-right: 8px;

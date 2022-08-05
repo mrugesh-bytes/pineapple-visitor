@@ -12,7 +12,6 @@ const ReserveCard = () => {
     const location: any = useLocation();
     const dispatch = useDispatch();
     const unit = useSelector((state: any) => state.unitReducer.unit.data);
-
     useEffect(() => {
         if (Object.keys(unit).length === 0) dispatch(getUnit(location.state.unitId));
     }, []);
@@ -22,7 +21,10 @@ const ReserveCard = () => {
             <div className={styles.slideWrapper}>
                 <Slider sliderBanner={unit.image_url} />
                 <div className={styles.sliderDetails}>
-                    <h4 className={styles.sliderTitle}>{unit.name}</h4>
+                    <h4 className={styles.sliderTitle}>
+                        <span className={styles.unitName}>{unit.name}</span>
+                        <span className={styles.unitPrice}>${unit.price}</span>
+                    </h4>
                     <div className={styles.facilities}>
                         <div className={styles.facility}>
                             <img src={iconArea} alt="area" />

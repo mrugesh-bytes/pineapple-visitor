@@ -13,7 +13,7 @@ const OuterFooter = () => {
                         support@pineapplemultifamily.com
                     </a>
                 </div>
-                <div className={`${styles.link} ${styles.flexContainer}`}>Copyright @Pineapple {new Date().getFullYear()}</div>
+                <div className={`${styles.copyright} ${styles.flexContainer}`}>Copyright @Pineapple {new Date().getFullYear()}</div>
                 <div className={`${styles.link} ${styles.flexContainer}`}>
                     <img src={iconPhone} alt="Icon Phone" />
                     <a href="tel:+18887511211">888-751-1211</a>

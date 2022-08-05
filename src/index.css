@@ -100,11 +100,11 @@ table {
     width: 56px;
     border-radius: 50%;
 }
-.react-calendar .react-calendar__month-view__days .react-calendar__tile[disabled] {
+/* .react-calendar .react-calendar__month-view__days .react-calendar__tile[disabled] {
     position: relative;
     color: #bdbdbd;
     cursor: not-allowed;
-}
+} */
 .react-calendar .react-calendar__month-view__days .react-calendar__tile abbr {
     position: relative;
 }
@@ -164,5 +164,5 @@ body.ReactModal__Body--open {
 }
 .carousel.carousel-slider,
 .carousel .slide {
-    border-radius: 8px !important;
+    border-radius: 16px !important;
 }
