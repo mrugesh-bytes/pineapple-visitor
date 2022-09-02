@@ -82,10 +82,10 @@ const Login = () => {
                     <button type="submit">Sign In</button>
                 </div>
             </form>
-            <div className={style.signinBorder}>
+            {/* <div className={style.signinBorder}>
                 <span>Or Sign in with</span>
-            </div>
-            <div className={style.socialContainer}>
+            </div> */}
+            {/* <div className={style.socialContainer}>
                 <div className={style.iconWrapper}>
                     <img src={iconGmail} alt="Icon Google" />
                 </div>
@@ -98,7 +98,7 @@ const Login = () => {
                 <div className={style.iconWrapper}>
                     <img src={iconInsta} alt="Icon Instagram" />
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 };

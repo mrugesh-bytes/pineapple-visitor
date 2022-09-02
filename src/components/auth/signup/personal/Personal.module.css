@@ -1,0 +1,63 @@
+.header {
+    display: flex;
+    align-items: center;
+}
+.header .back {
+    min-height: 48px;
+    min-width: 48px;
+    border: 1px solid #d1d2d3;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 16px;
+}
+.header .back img {
+    transform: rotate(180deg);
+}
+.header .title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    color: #191c21;
+}
+.detailsBody {
+    margin-top: 32px;
+}
+.detailsBody .fieldWrapper label {
+    display: block;
+    margin-bottom: 16px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+    text-transform: capitalize;
+    color: #191c21;
+}
+.detailsBody .fieldWrapper {
+    margin-bottom: 24px;
+}
+.detailsBody .fieldWrapper:last-child {
+    margin-bottom: 0px;
+}
+.detailsBody .fieldWrapper input {
+    border: 1px solid #191c21;
+    border-radius: 8px;
+    height: 48px;
+    width: 100%;
+    padding: 10px 14px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+}
+.btnWrapper button {
+    background: #51ab86;
+    border-radius: 8px;
+    height: 48px;
+    padding: 10px 15px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    color: #ffffff;
+    width: 100%;
+}

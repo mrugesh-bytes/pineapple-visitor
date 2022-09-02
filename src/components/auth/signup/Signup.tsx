@@ -10,6 +10,9 @@ import iconHide from '../../../images/icons/icon-hide.svg';
 import { getRegister } from '../../../redux/auth/actions/auth.action';
 import { useDispatch, useSelector } from 'react-redux';
 import Loader from '../../common/loader/Loader';
+import OnBoard from './onboard/OnBoard';
+import Personal from './personal/Personal';
+import SecureAccount from './secureaccount/SecureAccount';
 
 const Signup = () => {
     const [showPass, setShowPass] = useState(false);
@@ -67,6 +70,7 @@ const Signup = () => {
     return (
         <>
             {loading && <Loader />}
+
             <div className={style.container}>
                 <h2 className={style.authTitle}>Welcome Back!</h2>
                 <p className={style.authDesc}>Hey 👋 Enter your details to signup</p>

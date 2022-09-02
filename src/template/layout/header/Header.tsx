@@ -29,7 +29,7 @@ const Header = () => {
                         <li>
                             <Link to="/units">Units</Link>
                         </li>
-                        <li>
+                        {/* <li>
                             <Link to="/tour-filter">Build My Tour</Link>
                         </li>
                         <li>
@@ -37,16 +37,16 @@ const Header = () => {
                         </li>
                         <li>
                             <Link to="/">Amenities</Link>
-                        </li>
+                        </li> */}
                         <li>
                             <Link to="/appointments">Appointments</Link>
                         </li>
-                        <li>
+                        {/* <li>
                             <Link to="/">Leasing Center</Link>
                         </li>
                         <li>
                             <Link to="/">Support</Link>
-                        </li>
+                        </li> */}
                     </ul>
                     <div className={styles.btnWrapper}>
                         <Button onClick={handleLogout} text={'Logout'} />

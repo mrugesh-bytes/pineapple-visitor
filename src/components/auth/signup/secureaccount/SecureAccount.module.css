@@ -1,0 +1,83 @@
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+}
+.header .back {
+    min-height: 48px;
+    min-width: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #d1d2d3;
+    border-radius: 8px;
+    margin-right: 16px;
+    cursor: pointer;
+}
+.header .title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    color: #191c21;
+}
+.header .back img {
+    transform: rotate(180deg);
+}
+.fieldWrapper {
+    margin-bottom: 24px;
+}
+.fieldWrapper:last-child {
+    margin-bottom: 0px;
+}
+.fieldWrapper label {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+    text-transform: capitalize;
+    color: #191c21;
+    margin-bottom: 16px;
+    display: block;
+}
+.fieldWrapper input {
+    border: 1px solid #d1d2d3;
+    border-radius: 8px;
+    height: 48px;
+    padding: 10px 45px 10px 14px;
+    width: 100%;
+}
+.passwordWrapper {
+    position: relative;
+}
+.passwordToggle {
+    position: absolute;
+    top: 50%;
+    transform: translate(0px, -50%);
+    right: 16px;
+}
+.passwordToggle img {
+    width: 19px;
+    object-fit: contain;
+}
+.btnWrapper {
+    margin-top: 32px;
+}
+.btnWrapper button {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    width: 100%;
+    border-radius: 8px;
+    height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.btnWrapper button.disable {
+    background: #d1d2d3;
+    color: #8c8d90;
+}
+.btnWrapper button.success {
+    color: #ffffff;
+    background: #51ab86;
+}

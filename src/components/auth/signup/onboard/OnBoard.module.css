@@ -1,0 +1,92 @@
+.header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+.header .title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    margin-bottom: 16px;
+    color: #191c21;
+}
+.header .description {
+    font-size: 16px;
+    line-height: 30px;
+}
+.listItems .item {
+    display: flex;
+    align-items: flex-start;
+    padding: 24px 0px;
+    border-bottom: 1px solid #d1d2d3;
+    position: relative;
+}
+.listItems .item:before {
+    content: '';
+    position: absolute;
+    background-image: url('../../../../images/icons/icon-chevron-right.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 9px;
+    height: 14px;
+    top: 50%;
+    transform: translate(0px, -50%);
+    right: 0px;
+    cursor: pointer;
+}
+.listItems .item:first-child {
+    padding-top: 0px;
+}
+.listItems .item:last-child {
+    border-bottom: 0px;
+}
+.listItems .item .num {
+    min-width: 32px;
+    min-height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid #d1d2d3;
+    font-size: 14px;
+    line-height: 28px;
+    color: #3f4246;
+}
+.listItems .item .itemDesc {
+    margin-left: 16px;
+}
+.listItems .item .itemDesc span {
+    display: block;
+}
+.listItems .item .itemDesc .title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+    color: #191c21;
+    margin-bottom: 8px;
+}
+.listItems .item .itemDesc .description {
+    font-size: 14px;
+    line-height: 26px;
+    color: #3f4246;
+}
+.onBoardFooter {
+    margin-top: 32px;
+}
+.onBoardFooter button {
+    height: 48px;
+    border-radius: 8px;
+    width: 100%;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    cursor: pointer;
+}
+.onBoardFooter button.btnDisable {
+    background: #d1d2d3;
+    color: #8c8d90;
+}
+.onBoardFooter button.btnSubmit {
+    background: #51ab86;
+    color: #fff;
+}
